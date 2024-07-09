@@ -1,5 +1,6 @@
+import AboutUs from '@/components/About Us/AboutUs';
 import MainLayout from '@/components/Layouts/MainLayouts';
-import AboutUs from '@/pages/AboutUs';
+
 import NotFound from '@/pages/shared/NotFound';
 import { createBrowserRouter } from 'react-router-dom';
 const router = createBrowserRouter([

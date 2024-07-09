@@ -1,6 +1,6 @@
 
 import { FaQuoteLeft } from 'react-icons/fa'; // Example: Using Font Awesome for icons (install as needed)
-import companyImage from '../assets/company-image.jpg'; // Example: Replace with your company image
+import mission from '../../assets/images/HDStockImages.com-mZQ2iq.jpg'
 
 const teamMembers = [
   {
@@ -40,26 +40,83 @@ const AboutUs = () => {
   return (
     <div className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-center mb-6">
-            About Our Company
-          </h2>
-          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between">
-            <div className="max-w-md mx-auto md:mr-8 mb-4 md:mb-0">
-              <img
-                src={companyImage}
-                alt="Company"
-                className="rounded-lg shadow-md"
-              />
-            </div>
-            <div className="max-w-lg">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vestibulum feugiat justo ac est lacinia, sed ultrices velit
-                consectetur. Aliquam erat volutpat. Duis at felis nec sapien
-                condimentum lobortis ut sed nunc.
-              </p>
-            </div>
+        <section className="my-8">
+          <div className="bg-gray-100">
+            {/* History Section */}
+            <section className="py-16 bg-white">
+              <div className="container mx-auto px-4">
+                <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between">
+                  <div className="w-full md:w-1/2 mb-8 md:mb-0">
+                    <h2 className="text-3xl font-bold mb-4">Our History</h2>
+                    <p className="text-lg leading-relaxed">
+                      Fitness Factory started with a simple yet powerful idea:
+                      to provide high-quality fitness equipment that empowers
+                      individuals to achieve their fitness goals. Established in
+                      [Year of Establishment], we have grown into a trusted name
+                      in the fitness industry, serving fitness enthusiasts of
+                      all levels.
+                    </p>
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <img
+                      src="/images/history.jpg"
+                      alt="History"
+                      className="rounded-lg shadow-lg mx-auto md:ml-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Mission Section */}
+            <section className="py-16 bg-gray-800 text-white">
+              <div className="container mx-auto px-4">
+                <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between">
+                  <div className="w-full md:w-1/2 mb-8 md:mb-0">
+                    <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+                    <p className="text-lg leading-relaxed">
+                      Our mission is to inspire and motivate people to lead
+                      healthier lives by offering innovative and durable fitness
+                      solutions. We believe in making fitness accessible to
+                      everyone, from beginners to professional athletes, through
+                      our wide range of products and expert guidance.
+                    </p>
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <img
+                      src={mission}
+                      alt="Mission"
+                      className="rounded-lg shadow-lg mx-auto md:ml-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Vision Section */}
+            <section className="py-16 bg-white">
+              <div className="container mx-auto px-4">
+                <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between">
+                  <div className="w-full md:w-1/2 mb-8 md:mb-0">
+                    <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
+                    <p className="text-lg leading-relaxed">
+                      At Fitness Factory, we envision a world where fitness is
+                      not just a routine, but a lifestyle. We continuously
+                      strive to innovate and improve, ensuring our customers
+                      receive the best possible fitness experience with every
+                      interaction.
+                    </p>
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <img
+                      src="/images/vision.jpg"
+                      alt="Vision"
+                      className="rounded-lg shadow-lg mx-auto md:ml-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </section>
 

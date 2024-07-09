@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [navOpen, setNavOpen] = useState(false);
@@ -26,38 +27,38 @@ const Navbar = () => {
               navOpen ? 'block' : 'hidden'
             }`}
           >
-            <li>
-              <a
-                href="/"
-                className="block py-2 text-gray-800 hover:text-blue-600"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="/products"
-                className="block py-2 text-gray-800 hover:text-blue-600"
-              >
-                Products
-              </a>
-            </li>
-            <li>
-              <a
-                href="/about"
-                className="block py-2 text-gray-800 hover:text-blue-600"
-              >
-                About Us
-              </a>
-            </li>
-            <li>
+            <Link
+              to="/"
+              className="block py-2 text-gray-800 hover:text-gray-400"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="block py-2 text-gray-800 hover:text-gray-400"
+            >
+              About Us
+            </Link>
+            <Link
+              to="/products"
+              className="block py-2 text-gray-800 hover:text-gray-400"
+            >
+              Products
+            </Link>
+            <Link
+              to="/contact"
+              className="block py-2 text-gray-800 hover:text-gray-400"
+            >
+              Contact
+            </Link>
+            {/* <li>
               <a
                 href="/contact"
                 className="block py-2 text-gray-800 hover:text-blue-600"
               >
                 Contact
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
