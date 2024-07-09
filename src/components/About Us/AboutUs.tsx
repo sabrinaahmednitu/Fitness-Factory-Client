@@ -2,7 +2,7 @@
 import { FaQuoteLeft } from 'react-icons/fa'; // Example: Using Font Awesome for icons (install as needed)
 import mission from '../../assets/images/mission.jpg'
 import history from '../../assets/images/history.jpg'
-import vision from '../../assets/images/HDStockImages.com-mZQ2iq.jpg'
+import vision from '../../assets/images/vision.jpg'
 
 const teamMembers = [
   {
@@ -47,8 +47,24 @@ const AboutUs = () => {
             {/* History Section */}
             <section className="py-16 bg-white">
               <div className="container mx-auto px-4">
-                <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between">
+                <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5">
                   <div className="w-full md:w-1/2 mb-8 md:mb-0">
+                    {/* <h2 className="text-3xl font-bold mb-4">Our History</h2>
+                    <p className="text-lg leading-relaxed">
+                      Fitness Factory started with a simple yet powerful idea:
+                      to provide high-quality fitness equipment that empowers
+                      individuals to achieve their fitness goals. Established in
+                      [Year of Establishment], we have grown into a trusted name
+                      in the fitness industry, serving fitness enthusiasts of
+                      all levels.
+                    </p> */}
+                    <img
+                      src={history}
+                      alt="History"
+                      className="rounded-lg shadow-lg mx-auto md:ml-auto"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2">
                     <h2 className="text-3xl font-bold mb-4">Our History</h2>
                     <p className="text-lg leading-relaxed">
                       Fitness Factory started with a simple yet powerful idea:
@@ -58,13 +74,11 @@ const AboutUs = () => {
                       in the fitness industry, serving fitness enthusiasts of
                       all levels.
                     </p>
-                  </div>
-                  <div className="w-full md:w-1/2">
-                    <img
+                    {/* <img
                       src={history}
                       alt="History"
                       className="rounded-lg shadow-lg mx-auto md:ml-auto"
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -73,7 +87,7 @@ const AboutUs = () => {
             {/* Mission Section */}
             <section className="py-16 bg-gray-800 text-white">
               <div className="container mx-auto px-4">
-                <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between">
+                <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5">
                   <div className="w-full md:w-1/2 mb-8 md:mb-0">
                     <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
                     <p className="text-lg leading-relaxed">
@@ -98,8 +112,23 @@ const AboutUs = () => {
             {/* Vision Section */}
             <section className="py-16 bg-white">
               <div className="container mx-auto px-4">
-                <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between">
+                <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5">
                   <div className="w-full md:w-1/2 mb-8 md:mb-0">
+                    <img
+                      src={vision}
+                      alt="Vision"
+                      className="rounded-lg shadow-lg mx-auto md:ml-auto"
+                    />
+                    {/* <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
+                    <p className="text-lg leading-relaxed">
+                      At Fitness Factory, we envision a world where fitness is
+                      not just a routine, but a lifestyle. We continuously
+                      strive to innovate and improve, ensuring our customers
+                      receive the best possible fitness experience with every
+                      interaction.
+                    </p> */}
+                  </div>
+                  <div className="w-full md:w-1/2">
                     <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
                     <p className="text-lg leading-relaxed">
                       At Fitness Factory, we envision a world where fitness is
@@ -108,13 +137,11 @@ const AboutUs = () => {
                       receive the best possible fitness experience with every
                       interaction.
                     </p>
-                  </div>
-                  <div className="w-full md:w-1/2">
-                    <img
+                    {/* <img
                       src={vision}
                       alt="Vision"
                       className="rounded-lg shadow-lg mx-auto md:ml-auto"
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
@@ -167,8 +194,8 @@ const AboutUs = () => {
 
         <section>
           <h2 className="text-3xl font-bold text-center mb-6">Contact Us</h2>
-          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between">
-            <div className="max-w-md mx-auto md:mr-8 mb-4 md:mb-0">
+          <div className=" max-w-[900px] mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between">
+            <div className="max-w-lg  md:mr-8 mb-4 md:mb-0">
               <p className="text-lg text-gray-700 leading-relaxed text-center md:text-left">
                 Have questions or feedback? Feel free to reach out to us.
               </p>
