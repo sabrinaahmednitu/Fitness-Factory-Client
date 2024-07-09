@@ -1,6 +1,8 @@
 
 import { FaQuoteLeft } from 'react-icons/fa'; // Example: Using Font Awesome for icons (install as needed)
-import mission from '../../assets/images/HDStockImages.com-mZQ2iq.jpg'
+import mission from '../../assets/images/mission.jpg'
+import history from '../../assets/images/history.jpg'
+import vision from '../../assets/images/HDStockImages.com-mZQ2iq.jpg'
 
 const teamMembers = [
   {
@@ -59,7 +61,7 @@ const AboutUs = () => {
                   </div>
                   <div className="w-full md:w-1/2">
                     <img
-                      src="/images/history.jpg"
+                      src={history}
                       alt="History"
                       className="rounded-lg shadow-lg mx-auto md:ml-auto"
                     />
@@ -109,7 +111,7 @@ const AboutUs = () => {
                   </div>
                   <div className="w-full md:w-1/2">
                     <img
-                      src="/images/vision.jpg"
+                      src={vision}
                       alt="Vision"
                       className="rounded-lg shadow-lg mx-auto md:ml-auto"
                     />
