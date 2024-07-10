@@ -1,0 +1,5 @@
+.grid-filter-column{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.2fr 1fr ;
+}
