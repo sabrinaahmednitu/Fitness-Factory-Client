@@ -1,9 +1,10 @@
+import HeroSection from "./HeroSection";
 
 
 const Home = () => {
     return (
-        <div>
-            <h2>i am home from component</h2>
+        <div className="mt-[57px]">
+           <HeroSection></HeroSection>
         </div>
     );
 };

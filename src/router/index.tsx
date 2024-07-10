@@ -1,4 +1,5 @@
 import AboutUs from '@/components/About Us/AboutUs';
+import Home from '@/components/Home/Home';
 import MainLayout from '@/components/Layouts/MainLayouts';
 import Products from '@/pages/Products/Products';
 
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        // element: <Home />,
+        element: <Home />,
       },
       {
         path: '/about',
