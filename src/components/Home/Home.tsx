@@ -1,4 +1,5 @@
 import CategoriesSection from "./CategoriesSection";
+import FeaturedSection from "./FeaturedSection";
 import HeroSection from "./HeroSection";
 
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div className="mt-[57px]">
             <HeroSection></HeroSection>
             <CategoriesSection></CategoriesSection>
+            <FeaturedSection></FeaturedSection>
         </div>
     );
 };

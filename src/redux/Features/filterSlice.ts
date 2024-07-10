@@ -148,6 +148,7 @@ const initialState = {
     minPrice: 0,
     maxPrice: 0,
   },
+  featured_products: [],
 };
 
 const filterSlice = createSlice({
@@ -155,8 +156,13 @@ const filterSlice = createSlice({
   initialState,
   reducers: {
     loadFilterProducts: (state, action) => {
+      const featureData = action.payload.filter(
+        (product) => product.featured === true
+      );
       state.all_products = action.payload;
       state.filter_products = action.payload;
+      state.featured_products = featureData;
+      
       const prices = action.payload.map((product) => product.price);
       state.filters.maxPrice = Math.max(...prices);
       state.filters.minPrice = Math.min(...prices);
