@@ -11,8 +11,14 @@ export const baseApi = createApi({
         url: '/products',
       }),
     }),
+    getSingleProduct: builder.query({
+      query: (id) => ({
+        method: 'GET',
+        url: `/products/${id}`,
+      }),
+    }),
   }),
 });
 
 // auto-generated based on the defined endpoints
-export const {  useGetProductsQuery } = baseApi;
+export const {  useGetProductsQuery ,useGetSingleProductQuery } = baseApi;

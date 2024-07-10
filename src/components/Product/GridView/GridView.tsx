@@ -1,21 +1,14 @@
 
 import { Link } from 'react-router-dom';
-
 import './GridView.css';
-import { useGetProductsQuery } from '@/redux/Api/baseApi';
 
-const GridView = () => {
-  const { data, isLoading } = useGetProductsQuery(undefined);
-
-    if (isLoading) {
-      return <p className="text-2xl text-center text-red-500">Loading .... </p>;
-    }
+const GridView = ({ products }) => {
   return (
     <div>
       <div className="container grid lg:grid-cols-3 md:grid-cols-2 mt-[100px]">
-        {data?.map((product) => {
+        {products?.map((product) => {
           return (
-            <div>
+            <div key={product._id}>
               <Link to={`/singleProduct/${product._id}`}>
                 <div className="card">
                   <figure className="product-figure">

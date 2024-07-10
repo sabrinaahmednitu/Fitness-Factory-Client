@@ -11,10 +11,18 @@ type TProduct = {
   rating: string;
 };
 type TInitialState = {
+  isLoading: boolean;
+  isError: boolean;
   products: TProduct[];
+  featureProducts: TProduct[];
+  singleProduct: TProduct | null;
 };
 const initialState: TInitialState = {
+  isLoading: false,
+  isError: false,
   products: [],
+  featureProducts: [],
+  singleProduct: null,
 };
 const productSlice = createSlice({
   name: 'product',
@@ -23,21 +31,44 @@ const productSlice = createSlice({
     addProduct: (state, action: PayloadAction<TProduct>) => {
       state.products.push({ ...action.payload, isFeatured: false });
     },
-    // toggleComplete: (state, action: PayloadAction<string>) => {
-    //   const product = state.products.find(
-    //     (product) => product._id === action.payload
-    //   );
-    //   if (product) {
-    //     product.isFeatured = !product.isFeatured;
-    //   }
-    // },
-    // deletedProduct: (state, action: PayloadAction<string>) => {
-    //   state.products = state.products.filter(
-    //     (product) => product._id !== action.payload
-    //   );
-    // },
+    setLoading: (state) => {
+      state.isLoading = true;
+    },
+    setApiData: (state, action) => {
+      const featureData = action.payload.filter(
+        (currentElements) => currentElements.featured === true
+      );
+      state.products = action.payload;
+      state.featureProducts = featureData;
+      state.isLoading = false;
+    },
+    setApiError: (state) => {
+      state.isError = true;
+      state.isLoading = false;
+    },
+    setSingleLoading: (state) => {
+      state.isLoading = true;
+    },
+    setSingleProduct: (state, action) => {
+      state.singleProduct = action.payload;
+      state.isLoading = false;
+    },
+    setSingleError: (state) => {
+      state.isError = true;
+      state.isLoading = false;
+    },
   },
 });
-export const { addProduct } =
-  productSlice.actions;
+export const {
+  addProduct,
+  setLoading,
+  setApiData,
+  setApiError,
+  setSingleLoading,
+  setSingleProduct,
+  setSingleError,
+} = productSlice.actions;
 export default productSlice.reducer;
+
+
+
