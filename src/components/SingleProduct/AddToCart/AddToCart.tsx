@@ -1,59 +1,38 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './AddToCart.css';
-import { FaCheck } from 'react-icons/fa';
 import CartAmountToggle from '../CartAmountToggle/CartAmountToggle';
 import { NavLink } from 'react-router-dom';
-import { useCartContext } from '../../../context/cartContext';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '@/redux/Features/cartSlice';
 
 const AddToCart = ({ singleProduct }) => {
-  const { addToCart } = useCartContext();
+ const dispatch = useDispatch();
+ const { id, stock, name, images, price } = singleProduct;
 
-  const { id, colors, stock } = singleProduct;
+ const [quantity, setQuantity] = useState(1);
 
-  const [currentColor, setCurrentColor] = useState(colors[0]);
-  const [amount, setAmount] = useState(1);
+ const setIncrease = () => {
+   quantity < stock ? setQuantity(quantity + 1) : setQuantity(stock);
+ };
+ const setDecrease = () => {
+   quantity > 1 ? setQuantity(quantity - 1) : setQuantity(1);
+ };
 
-  const setIncrease = () => {
-    amount < stock ? setAmount(amount + 1) : setAmount(stock);
-  };
-  const setDecrease = () => {
-    amount > 1 ? setAmount(amount - 1) : setAmount(1);
-  };
+ const handleAddToCart = () => {
+   dispatch(addToCart({ id, name, image: images.url, price, quantity }));
+ };
 
   return (
     <div>
-      <div className="colors">
-        <p>
-          Color :{' '}
-          {colors.map((color, index) => (
-            <button
-              key={index}
-              style={{ backgroundColor: color }}
-              className={
-                currentColor === color ? 'btnStyle active' : 'btnStyle'
-              }
-              onClick={() => setCurrentColor(color)}
-            >
-              {currentColor === color ? (
-                <FaCheck className="checkStyle"></FaCheck>
-              ) : null}
-            </button>
-          ))}
-        </p>
-      </div>
-
       <hr />
       {/* add to cart */}
       <CartAmountToggle
-        amount={amount}
+        quantity={quantity}
         setDecrease={setDecrease}
         setIncrease={setIncrease}
       ></CartAmountToggle>
 
-      <NavLink
-        to="/cart"
-        onClick={() => addToCart(id, currentColor, amount, singleProduct)}
-      >
+      <NavLink to="/cart" onClick={handleAddToCart}>
         <button className="addButton">Add To Cart;</button>
       </NavLink>
     </div>

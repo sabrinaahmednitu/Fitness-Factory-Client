@@ -1,4 +1,5 @@
 import AboutUs from '@/components/About Us/AboutUs';
+import Cart from '@/components/Cart/Cart/Cart';
 import Home from '@/components/Home/Home';
 import MainLayout from '@/components/Layouts/MainLayouts';
 import SingleProduct from '@/components/SingleProduct/SingleProduct/SingleProduct';
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/products/:id',
         element: <SingleProduct />,
+      },
+      {
+        path: '/cart',
+        element: <Cart />,
       },
 
       {

@@ -28,21 +28,15 @@ if (isLoading) {
             <img src={product?.images} alt="" />
           </div>
           <div className="product_data text-black p-5">
-            <h1 className="text-4xl mb-3">
-              {product?.name}
-            </h1>
+            <h1 className="text-4xl mb-3">{product?.name}</h1>
             {/* <Stars stars={stars} reviews={reviews}></Stars> */}
-            <p className="product-real-price font-bold text-indigo-500 mb-3">
-              Deal of the Day : <p>{product?.price}</p>
+            <p className="product-real-price font-bold  mb-3">
+              <p> Price : {product?.price}$</p>
             </p>
             <h1>{product?.description}</h1>
-            <div className="product-data-warranty flex mt-5 mb-5">
+            <div className="product-data-warranty flex gap-5 mt-5 mb-5">
               <div>
                 <TbTruckDelivery className="text-3xl"></TbTruckDelivery>
-                <p>Free Delivery</p>
-              </div>
-              <div>
-                <TbReplace className="text-3xl"></TbReplace>
                 <p>Free Delivery</p>
               </div>
               <div>
@@ -60,17 +54,12 @@ if (isLoading) {
               <p>
                 Available :{' '}
                 <span className="font-bold">
-                  {product?.stock > 0 ? 'In Stock' : 'Not Availavle'}
+                  {product?.stock > 0 ? 'In Stock' : 'Not Available'}
                 </span>{' '}
               </p>
             </div>
             <hr />
-            {product.stock > 0 && (
-              <NavLink
-                to="/cart">
-                <button className="addButton">Add To Cart</button>
-              </NavLink>
-            )}
+            {product.stock > 0 && <AddToCart singleProduct={product}></AddToCart>}
           </div>
         </div>
       </section>

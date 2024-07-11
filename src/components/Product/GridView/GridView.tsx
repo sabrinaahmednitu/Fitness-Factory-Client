@@ -1,28 +1,28 @@
 
-
 import { Link } from 'react-router-dom';
-import './GridView.css';
 
 const GridView = ({ products }) => {
 
   return (
     <div>
-      <div className="container grid lg:grid-cols-3 md:grid-cols-2 mt-[100px]">
+      <div className="container grid lg:grid-cols-3 md:grid-cols-2 gap-5 mt-[50px]">
         {products?.map((product) => {
           return (
             <div key={product._id}>
               <Link to={`/products/${product._id}`}>
-                <div className="card">
+                <div>
                   <figure className="product-figure">
                     <img src={product.images} alt={product.name} />
-                    <figcaption className="category">
-                      {product.category}
-                    </figcaption>
                   </figure>
-                  <div className="card-data card-data-flex">
-                    <h1>{product.name}</h1>
-                    <p>{product.price}</p>
+                  <div className="card-data card-data-flex gap-5">
+                    <h1 className='font-bold'>{product.name}</h1>
+                    <p>price: {product.price}$</p>
+                    <p>{ product.description.slice(0,94)}....</p>
                   </div>
+                  <figcaption className="category">
+                    {product.category}
+                  </figcaption>
+
                 </div>
               </Link>
             </div>

@@ -1,14 +1,14 @@
-import React from 'react';
+
 import './CartAmountToggle.css';
 import { FaMinus ,FaPlus } from 'react-icons/fa';
 
-const CartAmountToggle = ({amount,setIncrease,setDecrease}) => {
+const CartAmountToggle = ({quantity,setIncrease,setDecrease}) => {
     return (
       <div>
         <div className="cart-button">
           <div className="amount-toggle">
             <button onClick={() => setDecrease()}> <FaMinus></FaMinus> </button>
-            <div className="amount-style">{amount}</div>
+            <div className="amount-style">{quantity}</div>
             <button onClick={() => setIncrease()}> <FaPlus></FaPlus> </button>
           </div>
             </div>
