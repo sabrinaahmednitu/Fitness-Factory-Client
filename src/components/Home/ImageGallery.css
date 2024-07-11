@@ -1,0 +1,39 @@
+.full-img {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.full-img img {
+  width: 90%;
+  max-width: 500px;
+}
+
+.full-img span {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.vertical {
+  grid-row: span 2 / span 2;
+}
+
+.horizontal {
+  grid-column: span 2 / span 2;
+}
+
+.big {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+}

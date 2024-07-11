@@ -1,6 +1,8 @@
+import BenefitsSection from "./BenefitsSection";
 import CategoriesSection from "./CategoriesSection";
 import FeaturedSection from "./FeaturedSection";
 import HeroSection from "./HeroSection";
+import ImageGallery from "./ImageGallery";
 
 
 const Home = () => {
@@ -9,6 +11,8 @@ const Home = () => {
             <HeroSection></HeroSection>
             <CategoriesSection></CategoriesSection>
             <FeaturedSection></FeaturedSection>
+            <BenefitsSection></BenefitsSection>
+            <ImageGallery></ImageGallery>
         </div>
     );
 };
