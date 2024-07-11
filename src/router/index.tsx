@@ -1,6 +1,7 @@
 import AboutUs from '@/components/About Us/AboutUs';
 import Home from '@/components/Home/Home';
 import MainLayout from '@/components/Layouts/MainLayouts';
+import SingleProduct from '@/components/SingleProduct/SingleProduct/SingleProduct';
 import Products from '@/pages/Products/Products';
 
 import NotFound from '@/pages/shared/NotFound';
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
         path: '/products',
         element: <Products />,
       },
+      {
+        path: '/products/:id',
+        element: <SingleProduct />,
+      },
+
       {
         path: '*',
         element: <NotFound />,
