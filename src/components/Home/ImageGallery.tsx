@@ -1,6 +1,6 @@
 import img1 from '../../assets/images//HDStockImages.com-mZQ2iq.jpg';
 import p1 from '../../assets/images/accessories.jpg';
-import p2 from '../../assets/images/cardio.png';
+import p2 from '../../assets/images/HDStockImages.com-mZQ2iq.jpg';
 import p3 from '../../assets/images//expertTraine.jpeg';
 import p5 from '../../assets/images/wideVarity.jpg';
 import p8 from '../../assets/images/heroSection.jpg';
@@ -16,8 +16,12 @@ const images = [
   { src: img1, alt: 'Image 21', className: 'row-span-2' },
   { src: p14, alt: 'Image 18', className: 'col-span-2' },
   { src: p10, alt: 'Image 22', className: '' },
-  { src: p5, alt: 'Image 5', className: '' },
+  { src: p5, alt: 'Image 5', className: 'col-span-2' },
   { src: p8, alt: 'Image 8', className: 'col-span-2 row-span-2' },
+  { src: p3, alt: 'Image 3', className: '' },
+  { src: p2, alt: 'Image 2', className: 'row-span-2' },
+  { src: p9, alt: 'Image 6', className: '' },
+  { src: p16, alt: 'Image 16', className: 'col-span-2' },
   { src: p3, alt: 'Image 3', className: '' },
   { src: p2, alt: 'Image 2', className: 'row-span-2' },
   { src: p9, alt: 'Image 6', className: '' },
