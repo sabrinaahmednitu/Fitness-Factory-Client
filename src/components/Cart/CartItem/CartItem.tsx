@@ -70,7 +70,7 @@ interface Props extends CartItem {}
 const CartItemComponent: React.FC<Props> = ({
   id,
   name,
-  image,
+  images,
   price,
   quantity,
 }) => {
@@ -82,7 +82,7 @@ const CartItemComponent: React.FC<Props> = ({
         <div className="cart-item-content">
           <div>
             <figure>
-              <img src={image} alt="" />
+              <img src={images} alt="" />
             </figure>
           </div>
           <div>
