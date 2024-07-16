@@ -90,6 +90,8 @@ const Cart = () => {
     console.log('Cart State:', cart); // Log the cart state when component mounts
   }, [cart]);
 
+   console.log(cart);
+
   if (!cart || cart.length === 0) {
     return (
       <div>
@@ -110,7 +112,8 @@ const Cart = () => {
       <hr />
       <div className="cart-item">
         {cart.map((curElem) => (
-          <CartItem key={curElem.id} {...curElem} />
+          <CartItem key={curElem._id} {...curElem} />
+          // <CartItem key={curElem._id} {...curElem} />
         ))}
       </div>
       <hr />

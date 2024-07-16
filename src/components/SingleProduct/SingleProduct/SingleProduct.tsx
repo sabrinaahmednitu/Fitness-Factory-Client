@@ -1,8 +1,8 @@
 
 
-import { NavLink, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useGetSingleProductQuery } from '@/redux/Api/baseApi';
-import { TbReplace, TbTruckDelivery } from 'react-icons/tb';
+import {  TbTruckDelivery } from 'react-icons/tb';
 import { MdSecurity } from 'react-icons/md';
 import AddToCart from '../AddToCart/AddToCart';
 
@@ -10,9 +10,10 @@ import AddToCart from '../AddToCart/AddToCart';
 
 const SingleProduct = () => {
   
-const { id } = useParams();
-const { data: product, isLoading } = useGetSingleProductQuery(id);
+  const { id } = useParams();
 
+const { data: product, isLoading } = useGetSingleProductQuery(id);
+// console.log(product)
 if (isLoading) {
   return <div>Loading...</div>;
 }

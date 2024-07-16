@@ -81,7 +81,7 @@
 // export default cartSlice.reducer;
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { CartItem } from '../../../types'; // Adjust the path as necessary
+import { CartItem } from '../../../types'; 
 
 interface CartState {
   cart: CartItem[];
@@ -92,7 +92,7 @@ interface CartState {
 const initialState: CartState = {
   cart: [],
   total_price: 0,
-  shipping_fee: 50, // Example shipping fee
+  shipping_fee: 50, 
 };
 
 const cartSlice = createSlice({
@@ -105,7 +105,7 @@ const cartSlice = createSlice({
     ) => {
       const { product, quantity } = action.payload;
       console.log(product);
-      console.log(state.cart)
+      console.log(state.cart);
       const existingProductIndex = state.cart.findIndex(
         (item) => item._id === product._id
       );
@@ -122,7 +122,7 @@ const cartSlice = createSlice({
       );
     },
     removeItem: (state, action: PayloadAction<string>) => {
-      state.cart = state.cart.filter((item) => item.id !== action.payload);
+      state.cart = state.cart.filter((item) => item._id !== action.payload);
       state.total_price = state.cart.reduce(
         (total, item) => total + item.price * item.quantity,
         0

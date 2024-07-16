@@ -68,7 +68,7 @@ import { removeItem, setDecrease, setIncrease } from '@/redux/Features/cartSlice
 interface Props extends CartItem {}
 
 const CartItemComponent: React.FC<Props> = ({
-  id,
+  _id,
   name,
   images,
   price,
@@ -81,6 +81,7 @@ const CartItemComponent: React.FC<Props> = ({
       <div className="grid-five-column ">
         <div className="cart-item-content">
           <div>
+            <p>{_id}</p>
             <figure>
               <img src={images} alt="" />
             </figure>
@@ -94,9 +95,9 @@ const CartItemComponent: React.FC<Props> = ({
         </div>
         <div className="cart-quantity">
           <div>
-            <button onClick={() => dispatch(setDecrease(id))}>-</button>
+            <button onClick={() => dispatch(setDecrease(_id))}>-</button>
             <span>{quantity}</span>
-            <button onClick={() => dispatch(setIncrease(id))}>+</button>
+            <button onClick={() => dispatch(setIncrease(_id))}>+</button>
           </div>
         </div>
         <div className="cart-hide">
@@ -105,7 +106,7 @@ const CartItemComponent: React.FC<Props> = ({
         <div>
           <FaTrash
             className="remove-icon"
-            onClick={() => dispatch(removeItem(id))}
+            onClick={() => dispatch(removeItem(_id))}
           />
         </div>
       </div>

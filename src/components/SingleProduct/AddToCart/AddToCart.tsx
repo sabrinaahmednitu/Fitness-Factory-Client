@@ -51,7 +51,8 @@ import { addToCart } from '@/redux/Features/cartSlice'; // Update the path as ne
 
 const AddToCart = ({ singleProduct }) => {
   const dispatch = useDispatch();
-  const { id, stock } = singleProduct;
+  const { _id, stock } = singleProduct;
+  //console.log(singleProduct._id);
 
   const [quantity, setQuantity] = useState(1);
 
