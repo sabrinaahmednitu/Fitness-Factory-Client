@@ -73,7 +73,7 @@
 // export default Cart;
 
 import { useSelector, useDispatch } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Cart.css';
 import CartItem from '../CartItem/CartItem';
 import { clearCart } from '@/redux/Features/cartSlice';
@@ -139,6 +139,14 @@ const Cart = () => {
           <div className="total-field">
             <p>order Total :</p>
             <p>{shipping_fee + total_price}</p>
+          </div>
+          <div className="d-flex mx-auto mt-5">
+            <Link
+              to="/checkout"
+              className="btn bg-gray-500 text-white py-2 px-5 "
+            >
+              Checkout
+            </Link>
           </div>
         </div>
       </div>
