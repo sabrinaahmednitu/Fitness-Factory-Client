@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Checkout = () => {
      const [userDetails, setUserDetails] = useState({
@@ -76,12 +76,14 @@ const Checkout = () => {
         Total Price: ${total_price}
       </h3>
 
-      <button
-        className="mt-6 w-full bg-green-600 text-white py-3 rounded-md hover:bg-green-700"
-        onClick={handlePlaceOrder}
-      >
-        Place Order (Cash on Delivery)
-      </button>
+      <Link to="/success">
+        <button
+          className="mt-6 w-full bg-green-600 text-white py-3 rounded-md hover:bg-green-700"
+          onClick={handlePlaceOrder}
+        >
+          Place Order (Cash on Delivery)
+        </button>
+      </Link>
     </div>
   );
 };

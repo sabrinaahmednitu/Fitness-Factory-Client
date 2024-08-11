@@ -4,6 +4,7 @@ import Checkout from '@/components/Checkout/Checkout';
 import Home from '@/components/Home/Home';
 import MainLayout from '@/components/Layouts/MainLayouts';
 import SingleProduct from '@/components/SingleProduct/SingleProduct/SingleProduct';
+import Success from '@/components/Success/Success';
 import Products from '@/pages/Products/Products';
 
 import NotFound from '@/pages/shared/NotFound';
@@ -37,7 +38,10 @@ const router = createBrowserRouter([
         path: '/checkout',
         element: <Checkout />,
       },
-
+      {
+        path: '/success',
+        element: <Success />,
+      },
       {
         path: '*',
         element: <NotFound />,
