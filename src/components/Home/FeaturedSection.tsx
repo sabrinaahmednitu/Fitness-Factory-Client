@@ -25,7 +25,7 @@ const FeaturedSection = ({ products }) => {
                 <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
                 <p className="mb-4">{product.price}</p>
                 <Link
-                  to={`/product/${product.id}`}
+                  to={`/products/${product._id}`}
                   className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
                 >
                   View Details

@@ -6,7 +6,7 @@ const Success = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-green-50">
       <div className="text-center p-10 bg-white shadow-lg rounded-lg animate__animated animate__bounceIn">
-        <div className="rounded-full h-[120px] w-[120px] border-4 border-green-500 mx-auto ">
+        <div className="rounded-full h-[120px] w-[120px] border-4 border-green-500 mx-auto">
           <svg
             className="w-18 h-24 text-green-500 mt-2 mx-auto animate__animated animate__tada animate__delay-1s"
             xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const Success = () => {
           </svg>
         </div>
         <h2 className="text-3xl font-bold text-gray-800 mb-2 mt-3 ">
-          Congratulations !
+          Congratulations
         </h2>
         <h2 className="text-3xl font-bold text-gray-800 mb-2">
           Order Placed Successfully!

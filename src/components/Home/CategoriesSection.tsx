@@ -18,7 +18,8 @@ const CategoriesSection = () => {
                   <img
                     src={strength}
                     alt="Strength"
-                    className="w-[300px] h-64 object-cover mx-auto"
+                    className="w-[180px] h-44 mx-auto"
+                    // className="w-[300px] h-64 object-cover mx-auto"
                   />
                   <div className="absolute inset-0 bg-black opacity-0 hover:opacity-50 transition duration-300 group-hover:opacity-50"></div>
                   <div className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
@@ -33,7 +34,7 @@ const CategoriesSection = () => {
                   <img
                     src={cardio}
                     alt="Cardio"
-                    className="w-[250px] h-64  mx-auto"
+                    className="w-[170px] h-44 mx-auto py-2"
                   />
                   <div className="absolute inset-0 bg-black opacity-0 hover:opacity-50 transition duration-300 group-hover:opacity-50"></div>
                   <div className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
@@ -48,7 +49,7 @@ const CategoriesSection = () => {
                   <img
                     src={accessories}
                     alt="Accessories"
-                    className="w-full h-64 object-cover"
+                    className="w-[170px] h-44 mx-auto rounded-full py-2"
                   />
                   <div className="absolute inset-0 bg-black opacity-0 hover:opacity-50 transition duration-300 group-hover:opacity-50"></div>
                   <div className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
